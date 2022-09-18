@@ -59,12 +59,20 @@
 				4302336328D61920002AF60D /* AppDelegate.swift */,
 				4302336528D61920002AF60D /* SceneDelegate.swift */,
 				4302336728D61920002AF60D /* ViewController.swift */,
-				4302336928D61920002AF60D /* Main.storyboard */,
+				4302337728D61934002AF60D /* Storyboards */,
 				4302336C28D61923002AF60D /* Assets.xcassets */,
-				4302336E28D61923002AF60D /* LaunchScreen.storyboard */,
 				4302337128D61923002AF60D /* Info.plist */,
 			);
 			path = HW2;
+			sourceTree = "<group>";
+		};
+		4302337728D61934002AF60D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4302336928D61920002AF60D /* Main.storyboard */,
+				4302336E28D61923002AF60D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
