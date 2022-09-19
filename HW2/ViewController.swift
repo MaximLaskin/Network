@@ -11,18 +11,17 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchBitcoinInfo()
+        fetchCharacter()
         }
 
-
     @IBAction func ButtonPressed(_ sender: UIButton) {
+        fetchCharacter()
 
     }
 
-    private func fetchBitcoinInfo() {
+    private func fetchCharacter() {
 
         guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return }
 
@@ -38,7 +37,10 @@ class ViewController: UIViewController {
             let jsonDecoder = JSONDecoder()
             do {
                 let character = try jsonDecoder.decode(Character.self, from: data)
+                DispatchQueue.main.async {
                 self.nameLabel.text = character.name
+                }
+
             } catch {
                 print(error.localizedDescription)
             }
