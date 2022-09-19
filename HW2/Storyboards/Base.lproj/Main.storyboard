@@ -24,14 +24,25 @@
                                     <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TYd-X6-exa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6T-YO-anR">
+                                <rect key="frame" x="186" y="255" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="h6T-YO-anR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="DF2-Ey-t2D"/>
+                            <constraint firstItem="h6T-YO-anR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RWQ-oh-oyd"/>
                             <constraint firstItem="uJu-IM-JOr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="anp-5a-5k5"/>
                             <constraint firstItem="uJu-IM-JOr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gHw-oc-wUy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="h6T-YO-anR" id="dCP-rd-lqC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
