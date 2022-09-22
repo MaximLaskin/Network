@@ -37,22 +37,23 @@ final class MainViewController: UIViewController {
             print(data)
 
             let jsonDecoder = JSONDecoder()
+
             do {
                 let results = try jsonDecoder.decode(Results.self, from: data)
 
-                // guard let image = UIImage(data: data) else { return }          с картинкой не разбрался
+                DispatchQueue.global().async {
+                    guard let imageData = try? Data(contentsOf: url) else { return }
 
-                DispatchQueue.main.async {
 
-                    let index = Int.random(in: 1..<results.results.count)
-                    /*
-                     кривой диапазон. не получилось сделать от количесива персонажей. character.name
-                     */
+                    DispatchQueue.main.async {
 
-                    self.nameLabel.text = results.results[index].name
-                    self.descriptionLabel.text = results.results[index].description
+                        let index = Int.random(in: 1..<results.results.count)
 
-                    // self.iconCharacterView.image = results.results[index].image
+                        self.nameLabel.text = results.results[index].name
+                        self.descriptionLabel.text = results.results[index].description
+                        self.iconCharacterView.image = UIImage(data: imageData)
+
+                    }
                 }
 
             } catch {
